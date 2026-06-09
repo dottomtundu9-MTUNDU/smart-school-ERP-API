@@ -1,0 +1,32 @@
+# Python bytecode (Faili za mfumo wa Python zisizohitajika)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment (Hili lina ma-file mengi mno, hayatakiwi kwenda GitHub)
+venv/
+ENV/
+env/
+.env/
+
+# Faili la siri la Mazingira (Hapa ndipo patakapokuwa na password za DB)
+.env
+
+# Databases za majaribio (Kama ukitumia SQLite isiende GitHub kujaza nafasi)
+*.db
+*.sqlite3
+
+# Mipangilio ya VS Code na Editors zingine
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# OS generated files (Faili za mifumo ya kompyuta Windows/Mac)
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
