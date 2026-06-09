@@ -25,6 +25,45 @@ A robust, enterprise-grade School Management System API built with **FastAPI**, 
 - **Security:** Passlib (bcrypt) & PyJWT
 
 ---
+backend/
+│
+├── app/
+│   ├── __init__.py
+│   ├── main.py                  # Mlango mkuu wa API (FastAPI instance & middleware)
+│   │
+│   ├── core/                    # Mipangilio mikuu ya mfumo
+│   │   ├── __init__.py
+│   │   ├── config.py            # Inasoma .env (Mazingira ya siri)
+│   │   ├── security.py          # Hash za password na JWT tokens
+│   │   └── database.py          # SQLAlchemy engine na Session ya DB
+│   │
+│   ├── models/                  # Database Tables (SQLAlchemy Models)
+│   │   ├── __init__.py
+│   │   ├── user.py              # Walimu, Wanafunzi, Ma-admin
+│   │   ├── student.py           # Taarifa za wanafunzi
+│   │   └── finance.py           # Malipo ya ada na ankara (Invoices)
+│   │
+│   ├── schemas/                 # Pydantic Models (Validations za data zinazoingia/toka)
+│   │   ├── __init__.py
+│   │   ├── user.py
+│   │   ├── student.py
+│   │   └── finance.py
+│   │
+│   ├── routers/                 # API Endpoints (Controllers)
+│   │   ├── __init__.py
+│   │   ├── auth.py              # Login na kupewa Token
+│   │   ├── students.py          # CRUD ya wanafunzi
+│   │   └── finance.py           # CRUD ya ada na malipo
+│   │
+│   └── services/                # Business Logic (Hapa ndio akili ya mfumo ilipo)
+│       ├── __init__.py
+│       ├── student_service.py
+│       └── finance_service.py
+│
+├── .env                         # Faili la siri (Database URL, Secret Keys)
+├── .gitignore                   # Kuzuia faili zisizoenda GitHub (kama .env au venv)
+├── requirements.txt             # Maktaba zote za Python zinazohitajika
+└── README.md                    # Maelezo ya mradi kwa wateja/wawekezaji
 
 ## 🚀 Getting Started
 
