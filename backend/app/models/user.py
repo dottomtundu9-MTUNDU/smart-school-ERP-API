@@ -1,7 +1,9 @@
 from app.core.database import Base
 from sqlalchemy import  Column,Integer,String,DateTime,Enum,Boolean,DateTime
+from sqlalchemy.orm import relationship
 from datetime import datetime
 import enum
+from app.models.student import Student
 
 class RoleEnum(str,enum.Enum):
     admin="admin"
@@ -17,3 +19,5 @@ class User(Base):
     role= Column(Enum(RoleEnum),default=RoleEnum.student)
     is_active=Column(Boolean,default=True)
     created_at=Column(DateTime,default=datetime.now())
+    
+    student=relationship("Student",back_populates="user",uselist=False)
