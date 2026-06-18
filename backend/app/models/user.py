@@ -9,7 +9,7 @@ class RoleEnum(str,enum.Enum):
     admin="admin"
     teacher="teacher"
     Accountant="Accountant"
-    student="dtudent"
+    student="student"
 
 class User(Base):
     __tablename__="Users"
